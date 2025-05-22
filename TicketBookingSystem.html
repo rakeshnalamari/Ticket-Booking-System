@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Booking System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="TicketBookingSystem.css" />
+</head>
+<body>
+    <!-- Add EmailJS SDK in your HTML head -->
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("YOUR_EMAILJS_USER_ID");
+  })();
+</script>
+
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>🎫 Ticket Booking System</h1>
+      <button id="themeToggle" class="btn btn-outline-secondary">🌗 Toggle Light/Dark</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="row g-2 my-3">
+      <div class="col-md-4">
+        <input type="text" id="searchFilter" class="form-control" placeholder="Search by name or category..." />
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="locationFilter" class="form-control" placeholder="Filter by location..." />
+      </div>
+      <div class="col-md-4">
+        <input type="date" id="dateFilter" class="form-control" />
+      </div>
+    </div>
+
+    <!-- Events List -->
+    <div id="eventsContainer" class="row g-3"></div>
+
+    <!-- Admin Panel -->
+    <div class="mt-5">
+      <h3>Admin Panel</h3>
+      <form id="adminForm" class="row g-3">
+        <div class="col-md-2">
+          <input type="text" id="eventName" class="form-control" placeholder="Event Name" required />
+        </div>
+        <div class="col-md-2">
+          <input type="text" id="eventCategory" class="form-control" placeholder="Category" required />
+        </div>
+        <div class="col-md-2">
+          <input type="text" id="eventLocation" class="form-control" placeholder="Location" required />
+        </div>
+        <div class="col-md-2">
+          <input type="date" id="eventDate" class="form-control" required />
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="eventAvailability" class="form-control" placeholder="Tickets" required />
+        </div>
+        <div class="col-md-2 d-flex gap-2">
+          <button type="submit" class="btn btn-success">Add</button>
+          <button type="button" id="updateEventBtn" class="btn btn-warning d-none">Update</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Booking Log -->
+    <div class="mt-5">
+      <h4>Booking Log</h4>
+      <ul id="bookingLog" class="list-group"></ul>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Simulated Payment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Please enter mock payment details:</p>
+            <input type="text" class="form-control mb-2" placeholder="Card Number" />
+            <input type="text" class="form-control mb-2" placeholder="Name on Card" />
+            <input type="text" class="form-control mb-2" placeholder="Expiry (MM/YY)" />
+            <input type="text" class="form-control mb-2" placeholder="CVV" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="confirmPaymentBtn">Confirm Payment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="TicketBookingSystem.js"></script>
+  </div>
+</body>
+</html>
