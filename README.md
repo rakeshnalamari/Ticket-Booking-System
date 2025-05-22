@@ -15,13 +15,13 @@ The **Ticket Booking System** is a responsive web application designed to stream
 📸 Screenshots
 
 ✅ Light Mode
-![Light Mode UI](Screenshot 2025-05-22 112018.png)
+![Light Mode UI](https://github.com/rakeshnalamari/Ticket-Booking-System/blob/main/Screenshot%202025-05-22%20112018.png?raw=true)
 
 🌗 Dark Mode
-![Dark Mode UI](Screenshot 2025-05-22 112032.png)
+![Dark Mode UI](https://github.com/rakeshnalamari/Ticket-Booking-System/blob/main/Screenshot%202025-05-22%20112032.png?raw=true)
 
 🛠 Admin Panel
-![Admin Panel](Screenshot 2025-05-22 112211.png)
+![Admin Panel](https://github.com/rakeshnalamari/Ticket-Booking-System/blob/main/Screenshot%202025-05-22%20112211.png?raw=true)
 
 
 📽 Video Demonstration
